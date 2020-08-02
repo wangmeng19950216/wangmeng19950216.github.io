@@ -92,7 +92,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="项目中遇到的问题"><a href="#项目中遇到的问题" class="headerlink" title="项目中遇到的问题"></a>项目中遇到的问题</h1>
+        <h1 id="项目中遇到的问题"><a href="#项目中遇到的问题" class="headerlink" title="项目中遇到的问题"></a>项目中遇到的问题</h1><h2 id="iview框架遇到的问题"><a href="#iview框架遇到的问题" class="headerlink" title="iview框架遇到的问题"></a>iview框架遇到的问题</h2><p>Iview   upload上传<br><Upload action="//jsonplaceholder.typicode.com/posts/"><br>&lt;Button :on-success=”callback”icon=”ios-cloud-upload-outline”&gt;Upload     files</Button><br></Upload></p>
+<p>在methods 中 </p>
+<p>Callback(response,file,fileList){<br>Console.log(response,file,fileList)<br>显示上传成功后的data数据<br>}</p>
+<p>iview Table 表格的 render 函数</p>
+<p>render 函数传入两个参数，第一个是 h，第二个是对象，包含 row、column 和 index，分别指当前单元格数据，当前列数据，当前是第几行。</p>
+<p>iview表格的render函数作用是自定义渲染当前列，权限高于key，所以使用了render函数，那么表格的key值就无效了。</p>
+<p>render:(h,params) =&gt; {<br>    return h(“ 定义的元素 “，{ 元素的性质 }，” 元素的内容”/[元素的内容])<br>}</p>
+<p>render: (h, params) =&gt; {<br>Params.row 就是当前行<br>        return h(‘div’, [<br>                       h(‘Icon’, {<br>                       props: {<br>                               type: ‘person’<br>                              }<br>                  }),<br>                     h(‘strong’, params.row.name)<br>                          ]);<br>H(‘button’,{<br>Props:{<br>Type:’’,<br>Size:’’<br>},<br>on:{<br>Click:{<br>创建的button按钮的点击事件<br>}<br>}</p>
+<p>})</p>
+<p>}</p>
+<p>对于render函数而言，我们可以将h看作一个创建元素的字段,创建好这个元素之后,需要添加样式或者做其他操作,后面跟着一个对象(里面是属性和方法)或者数组(该元素的子元素)就行。涉及到的几个属性无外乎props,style，on，attrs</p>
+
       
     </div>
     <footer class="article-footer">
