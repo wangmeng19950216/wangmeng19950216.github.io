@@ -107,7 +107,42 @@
 <p>iview的form表单验证问题 ？<br>今天做了form表单验证 因为第一次用iview这个框架 看了下 form表单的验证 通过在 Form表单 ref属性 来实现<br>rules = ‘验证方法 在data里面定义’ FormItem标签里 prop=’验证的字段’ data里接收 并进行验证 验证的方式有 blur change 可以验证数组类型可以是 number string</p>
 <h2 id="ES6的合并对象"><a href="#ES6的合并对象" class="headerlink" title="ES6的合并对象"></a>ES6的合并对象</h2><p>es5<br>let name = { name:’sea’ },age = { age:15 },person= {}<br>Object.assign(person,name,age)<br>console.log(person) //{ name:’sea’,age:15 }</p>
 <p>//es6<br>let name = { name:’sea’ },age = { age:15 }<br>let person = { …name,…age }<br>console.log(person)//{ name:’sea’,age:15 }</p>
-
+<h2>苹果适配微软雅黑</h2>
+<p>
+  @font-face {
+font-family: 'localsans-win-light';
+src: local('Microsoft YaHei Light'),local('Microsoft JhengHei');
+}
+@font-face {
+     font-family: 'localsans-win-bold';
+     font-weight: bold;
+     src: local('Microsoft YaHei Bold'),local('Microsoft YaHei');
+ }
+ @font-face {
+     font-family: 'localsans-win';
+     src: local('Microsoft YaHei');
+ }
+ @font-face {
+     font-family: 'localsans-mac-light';
+     src: local('PingFangSC-Light'),local('HiraginoSansGB-W3');
+ }
+@font-face {
+    font-family: 'localsans-mac';
+    src: local('PingFangSC-Regular'),local('HiraginoSansGB-W3');
+}
+@font-face {
+    font-family: 'localsans-mac-bold';
+    src: local('PingFangSC-Semibold'),local('HiraginoSansGB-W6');
+}
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}      
+</p>
       
     </div>
     <footer class="article-footer">
